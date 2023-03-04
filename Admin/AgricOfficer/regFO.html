@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="/css/style.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="col-md-12">
+      <!-- As a heading -->
+       <nav class="navbar navbar-dark bg-dark">
+         <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Agricultural Officer</span>
+     </div>
+        </nav>
+      </div>
+  </div>
+
+
+
+
+    <div class="container" style="margin-left: -10px;">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 700px; background: transparent;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              <!-- <span class="fs-4"></span> -->
+              <img src="/images/icon1.jpg" style="height: 60px;"><span>UFARM</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link link-dark" aria-current="page">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link active">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                  Register farmer One
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                  Appoint Farmer One
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+
+      
+	  <div class="col-md-10">
+		<div class="container-fluid form-style" style="margin-left: 130px;">
+			<!-- <div class="logo-div"><img class="user-logo mb-2" src="../images/logo.png" alt="Ufarm logo" /></div> -->
+			<form class="form" id="registerFO" action="#" name="registration" method="POST" onsubmit="return FarmerOneForm();">
+				<h5 class="text-muted text-center">Add FarmerOne Details</h5>
+				<hr />
+				<div class="row">
+					<div class="col">
+						<div class="form-field">
+							<label for="firstname">First Name:<small class="asterisk"> *</small></label>
+							<input id="firstname" type="text" name="firstname" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="lastname">Last Name:<small class="asterisk"> *</small></label>
+							<input id="lastname" type="text" name="lastname" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="uniquenumber">Unique Number:<small class="asterisk"> *</small></label>
+							<input class="text-muted" type="text" name="uniquenumber" id="" autocomplete="off" value="forexample MW1-001" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="password">Password:<small class="asterisk"> *</small></label>
+							<input class="text-muted" type="password" name="password" id="" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="form-field">
+							<label for="role">Role</label>
+							<select name="role" id="">
+								<option>Assign a role to this farmerOne</option>
+								<option>farmerOne</option>
+							</select>
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="ninnumber">NIN Number:<small class="asterisk"> *</small></label>
+							<input id="ninnumber" type="text" name="ninnumber" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="phonenumber">Phone Number:<small class="asterisk"> *</small></label>
+							<input id="phonenumber" type="text" name="phonenumber" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="residenttype">Resident Type:</label>
+							<select name="residenttype" id="">
+								<option>Select Resident Type</option>
+								<option>Permanent</option>
+								<option>Temporary</option>
+							</select>
+							<div class="error"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="form-field">
+							<label for="periodofstay">Period of Stay:<small class="asterisk"> *</small></label>
+							<input id="phonenumber" type="number" name="periodofstay" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="regdate">Date of Registration:<small class="asterisk"> *</small></label>
+							<input id="regdate" type="date" name="regdate" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="birthdate">Date of Bith<small class="asterisk"> *</small></label>
+							<input id="birthdate" type="date" name="birthdate" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="gender">Gender:</label>
+							<div class="radio">
+								<input id="gender1" type="radio" name="gender" autocomplete="off" checked="" /><span>Female</span>
+								<input id="gender2" type="radio" name="gender" autocomplete="off" /><span>Male</span>
+								<input id="gender3" type="radio" name="gender" autocomplete="off" /><span>Others</span>
+							</div>
+							<div class="error"></div>
+						</div>
+					</div>
+				</div>
+				<hr class="mt-1" />
+				<p class="text-muted">Add FarmerOne&apos;s Direction Coordinates</p>
+				<div class="row">
+					<div class="col">
+						<div class="form-field">
+							<label for="ward">Ward:</label>
+							<select name="ward" id="">
+								<option>Appoint a ward to this farmerOne</option>
+								<option>Ward 1</option>
+								<option>Ward 2</option>
+								<option>Ward 3</option>
+								<option>Ward 4</option>
+							</select>
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col column-stretch-left">
+						<div class="form-field">
+							<label for="streetname">Street Name:<small class="asterisk"> *</small></label>
+							<input id="streetname" type="text" name="streetname" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="housenumber">House Number:<small class="asterisk"> *</small></label>
+							<input id="housenumber" type="text" name="housenumber" autocomplete="off" />
+							<div class="error"></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-field">
+							<label for="gender">Activities:</label>
+							<div class="activity">
+								<input
+									class="checkbox-size"
+									id="register"
+									type="checkbox"
+									name="activity"
+									autocomplete="off"
+									value="inspects"
+									checked=""
+								/><span class="check-box-tex">Inspect</span>
+								<input
+									class="checkbox-size"
+									id="inspect"
+									type="checkbox"
+									name="activity"
+									autocomplete="off"
+									value="approves"
+								/><span class="check-box-tex">Approve</span>
+								<input
+									class="checkbox-size"
+									id="approve"
+									type="checkbox"
+									name="activity"
+									autocomplete="off"
+									value="register"
+								/><span class="check-box-tex"> Register</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container FO-form-btn">
+					<div class="button1">
+						<button class="btn btn-primary mt-1 form-add-btn mr-auto" type="submit">Add New</button>
+					</div>
+					<div class="button1">
+						<button class="btn btn-primary mt-1 ml-4 form-clear-btn mr-auto" type="" style="width: 120px">Clear</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	  </div>
+	  
+      
+       
+            
+        </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container-fluid" style="align-items: center; "> -->
+       
+        </div>
+      </div>
+      
+    </div>
+
+    
+
+
+
+      
+       
+  
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

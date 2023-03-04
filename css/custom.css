@@ -1,0 +1,81 @@
+.box{
+    width: 52ch;
+    animation: typing 3s steps(19), blink .5s step-end ;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+/* .container{
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+} */
+.offcanvas-body ul li{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.offcanvas-body ul li :last-child{
+    margin-bottom: 0;
+}
+
+.offcanvas-body ul li a{
+    text-decoration: none;
+    display: block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: all .4s ease;
+}
+
+.offcanvas-body ul li a:hover{
+    color: green;
+
+}
+
+.bottom-shadow {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+/* .vline {
+	border-left: 3px solid green;
+	height: 25px;
+}
+
+.img-logo {
+	height: auto;
+	width: 45%;
+}
+.menu-logo {
+	height: auto;
+	width: 150px;
+}
+.search-style {
+	width: 100px;
+	border-radius: 25px;
+	background-color: #f1f1f1;
+}
+.menu-bar {
+	/* margin-top: 45px; */
+	/* padding-bottom: 45px; */
+	/* height: 100px;
+/* } */

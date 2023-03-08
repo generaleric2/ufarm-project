@@ -39,6 +39,5 @@ const uploadsChart = new Chart(document.getElementById('uploads-chart'), {
   options: chartOptions
 });
 
-      
 
-  
+

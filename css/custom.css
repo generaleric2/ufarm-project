@@ -1,5 +1,5 @@
 .box{
-    width: 52ch;
+    width: 19ch;
     animation: typing 3s steps(19), blink .5s step-end ;
     white-space: nowrap;
     overflow: hidden;
@@ -164,3 +164,7 @@ select:focus {
     width: 100%;
   }
   
+
+
+
+ 

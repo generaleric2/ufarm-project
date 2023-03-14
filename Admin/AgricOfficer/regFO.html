@@ -49,9 +49,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link link-dark">
+                <a href="/Admin/AgricOfficer/updatedet.html" class="nav-link link-dark">
                   <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                  Appoint Farmer One
+                  Update FO Details
                 </a>
               </li>
               <li>
@@ -187,7 +187,6 @@
 							<div class="radio">
 								<input id="gender1" type="radio" name="gender" autocomplete="off" checked="" /><span>Female</span>
 								<input id="gender2" type="radio" name="gender" autocomplete="off" /><span>Male</span>
-								<input id="gender3" type="radio" name="gender" autocomplete="off" /><span>Others</span>
 							</div>
 							<div class="error"></div>
 						</div>
@@ -225,41 +224,25 @@
 					</div>
 					<div class="col">
 						<div class="form-field">
-							<label for="gender">Activities:</label>
-							<div class="activity">
-								<input
-									class="checkbox-size"
-									id="register"
-									type="checkbox"
-									name="activity"
-									autocomplete="off"
-									value="inspects"
-									checked=""
-								/><span class="check-box-tex">Inspect</span>
-								<input
-									class="checkbox-size"
-									id="inspect"
-									type="checkbox"
-									name="activity"
-									autocomplete="off"
-									value="approves"
-								/><span class="check-box-tex">Approve</span>
-								<input
-									class="checkbox-size"
-									id="approve"
-									type="checkbox"
-									name="activity"
-									autocomplete="off"
-									value="register"
-								/><span class="check-box-tex"> Register</span>
-							</div>
+							<label for="ward">Activities:</label>
+							<select name="ward" id="">
+								<option>Select Activity</option>
+								<option>Approvals</option>
+								<option>Inspection</option>
+								<option>Registration</option>
+								<option>All</option>
+							</select>
+							<div class="error"></div>
+					<div class="col">
+						
 						</div>
 					</div>
+					<div class="container FO-form-btn">
+						<div class="button1">
+							<button class="btn btn-primary mt-1 form-add-btn mr-auto" type="submit">Add New</button>
+						</div>
 				</div>
-				<div class="container FO-form-btn">
-					<div class="button1">
-						<button class="btn btn-primary mt-1 form-add-btn mr-auto" type="submit">Add New</button>
-					</div>
+				
 					<!-- <div class="button1">
 						<button class="btn btn-primary mt-1 ml-4 form-clear-btn mr-auto" type="" style="width: 120px">Clear</button>
 					</div> -->

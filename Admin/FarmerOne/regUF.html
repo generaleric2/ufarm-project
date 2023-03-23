@@ -88,14 +88,14 @@
       
 	  <div class="col-md-10">
 		<div class="container-fluid form-style" style="margin-left: 130px;">
-			<form  id="regForm" action="#" name="register"  onsubmit="return Validate();" method="POST">
+			<form  id="regForm" action="#" name="register"  onsubmit="return Validate(event);" method="POST">
 				<h5 class="text-muted text-center">Add Urban Farmer Details</h5>
 				<div class="row">
 					<div class="col">
 						<div class="form-field">
 							<label for="firstName">First Name</label>
 							<input id="firstName" type="text" name="firstName">
-							<small id="firstnameerr"></small>
+							<small id="firstnameerr" style="color: red; font-weight: bold; font-size: small;"></small>
 						</div>
 					</div>
 					<div class="col">
@@ -108,7 +108,7 @@
 					<div class="col">
 						<div class="form-field">
 							<label for="uniqueNumber">Unique Number</label>
-							<input type="text" class="form-control" id="uniqueNumber" >
+							<input type="text" name="uniqueNumber" id="uniqueNumber" >
 							<small id="uniquenumbererr"></small>
 						</div>
 					</div>

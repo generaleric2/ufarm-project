@@ -25,7 +25,7 @@
         <div class="card-title">
             <p>PLEASE ENTER YOUR DETAILS</p>
             <div class="card-body">
-                <form class="row g-3" id="regForm" action="#" name="register" onsubmit="return Validate(event);" method="POST">
+                <form class="row g-3" id="regForm" action="#" name="register" onsubmit="return Validate();" method="POST">
                     <div class="col-md-6">
                       <label for="firstName" class="form-label">First Name</label>
                       <input type="text" class="form-control" id="firstName">
@@ -37,12 +37,14 @@
                       <small id="lastnameerr"></small>
                     </div>
                     <div class="col-6">
-                      <label for="inputAddress" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                      <small id="emailerr"></small>
                     </div>
                     <div class="col-6">
-                      <label for="inputAddress2" class="form-label">Phone Number</label>
-                      <input type="number" class="form-control" id="phonenumber" placeholder="+256">
+                      <label for="phonenumber" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" name="phonenumber" placeholder="+256">
+                      <small id="phonenumbererr"></small>
                     </div>
                     <div class="col-md-6">
                       <label for="inputCity" class="form-label">Date Of Birth</label>
@@ -97,7 +99,7 @@
     
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/js/registervalidat.js"></script>
+    <script src="/js/regva.js"></script>
     
   </body>
 </html>

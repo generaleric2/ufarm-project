@@ -4,6 +4,7 @@
     const password = document.register.password;
     const role = document.register.role;
     const ninNumber = document.register.ninNumber;
+    const phoneNumber = document.register.phonenumber;
     const residentType = document.register.residenceType;
     const periodOfStay = document.register.period;
     const dateOfRegistration = document.register.regDate;
@@ -14,23 +15,23 @@
     const streetName = document.register.streetName;
     const houseNumber = document.register.houseNumber;
     const activities = document.register.activities;
-    const phoneNumber = document.register.phonenumber;
+    
 
 
 
-    const firstNameError = document.getElementById('firstnameerr')
-    const lastNameError = document.getElementById('lastnameerr')
-    const uniqueNumberError = document.getElementById('uniquenumbererr')
-    const passwordError = document.getElementById('passworderr')
-    const roleError = document.getElementById('roleerr')
-    const ninNumberError = document.getElementById('ninnumbererr')
-    const phoneNumberError = document.getElementById('phonenumbererr')
-    const residentTypeError = document.getElementById('resierr')
-    const periodOfStayError = document.getElementById('perror')
-    const dateOfRegistrationError = document.getElementById('derror')
-    const dateOfBirthError = document.getElementById('birthdateerr')
-    const genderError = document.getElementById('genderradioerr')
-    const wardError = document.getElementById('warderr')
+    const firstNameError = document.getElementById('firstnameerr');
+    const lastNameError = document.getElementById('lastnameerr');
+    const uniqueNumberError = document.getElementById('uniquenumbererr');
+    const passwordError = document.getElementById('passworderr');
+    const roleError = document.getElementById('roleerr');
+    const ninNumberError = document.getElementById('ninnumbererr');
+    const phoneNumberError = document.getElementById('phonenumbererr');
+    const residentTypeError = document.getElementById('resierr');
+    const periodOfStayError = document.getElementById('perror');
+    const dateOfRegistrationError = document.getElementById('derror');
+    const dateOfBirthError = document.getElementById('birthdateerr');
+    const genderError = document.getElementById('genderradioerr');
+    const wardError = document.getElementById('warderr');
 
 
     firstName.addEventListener("blur", firstNameVerify, true);
@@ -40,11 +41,11 @@
     role.addEventListener("blur", roleVerify, true);
     ninNumber.addEventListener("blur", ninNumberVerify, true);
     phoneNumber.addEventListener("blur",PhoneNumberVerify, true);
-    residentType.addEventListener("blur",residentTypeVerify, true);
-    periodOfStay.addEventListener("blur", periodOfStayVerify, true);
+    residentType.addEventListener("blur", residentVerify, true);
+    periodOfStay.addEventListener("blur", periodVerify, true);
     dateOfBirth.addEventListener("blur", dateOfBirthVerify, true);
-    gender.addEventListener("blur", genderErrorVerify, true);
-    ward.addEventListener("blur", wardErrorVerify, true);
+    gender.addEventListener("blur", genderVerify, true);
+    ward.addEventListener("blur", wardVerify, true);
 
     function Validate() {
         if (firstName.value === "") {
@@ -117,15 +118,17 @@
         if (ward.value === "") {
             wardError.textContent = "please fill in your ward";
             wardError.style = "1px solid red";
+            ward.focus();
             return false;
         }
+        
     }
 
     const firstNameRegex = /^.{3,15}[a-zA-Z]+$/;
     const lastNameRegex = /^.{3,15}[a-zA-Z]+$/;
     const alphaNumeric = /^[0-9a-zA-Z]+$/; 
     const ninRegex = /^[0-9a-zA-Z]{13}$/; 
-    const phoneRegex = /^[0-9a-zA-Z]{10}+$/; 
+    const phoneRegex =  /^\d{10}$/;
     const aoregex = /^AO-([0-9]{3})+$/;
     const ufregex = /^UF-([0-9]{3})+$/; 
     const foregex = /^FO-([0-9]{3})+$/;
@@ -190,7 +193,7 @@
     function roleVerify () {
         if (role.value !== "") {
             role.style.border = "1px solid green";
-            roleError.innerHTML = "";
+            roleError.textContent = "";
             return true;
         } else {
             return false;
@@ -200,7 +203,7 @@
     function genderVerify () {
         if (gender.value !== "") {
             gender.style.border = "1px solid green";
-            genderError.innerHTML = "";
+            genderError.textContent = "";
             return true;
         } else {
             return false;
@@ -210,7 +213,7 @@
     function dateOfBirthVerify() {
         if (dateOfBirth.value !== "") {
             dateOfBirth.style.border = "1px solid green";
-            dateOfBirthError.innerHTML = "";
+            dateOfBirthError.textContent = "";
             return true;
         } else {
             return false;
@@ -220,7 +223,7 @@
     function ninNumberVerify () {
         if (ninNumber.value !== "" && ninNumber.value.match(ninRegex)) {
             ninNumber.style.border = "1px solid green";
-            ninNumberError.innerHTML = "";
+            ninNumberError.textContent = "";
             return true;
         } else {
             ninNumber.style.border = "1px solid red";
@@ -233,7 +236,7 @@
     function PhoneNumberVerify() {
         if (phoneNumber.value !== "" && phoneNumber.value.match(phoneRegex)) {
             phoneNumber.style.border = "1px solid green";
-            phoneNumberError.innerHTML = "";
+            phoneNumberError.textContent = "";
             return true;
         } else {
              phoneNumber.style.border = "1px solid red";
@@ -242,7 +245,6 @@
              return false;
         }
     }
-    
 
     
 

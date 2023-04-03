@@ -1,0 +1,115 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  link(href='/css/style.css' rel='stylesheet')
+  title Update FO Details
+.col-md-12
+  // As a heading
+  nav.navbar.navbar-dark.bg-dark
+    .container-fluid
+      span.navbar-brand.mb-0.h1 Agricultural Officer
+.container(style='margin-left: -10px;')
+  .row
+    .col-md-2
+      .d-flex.flex-column.flex-shrink-0.p-3.bg-light(style='width: 280px; height: 700px; background: transparent;')
+        a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none(href='/')
+          svg.bi.me-2(width='40' height='32')
+            use(xlink:href='#bootstrap')
+          // <span class="fs-4"></span>
+          img(src='/images/icon1.jpg' style='height: 60px;')
+          span UFARM
+        hr
+        ul.nav.nav-pills.flex-column.mb-auto
+          li.nav-item
+            a.nav-link.link-dark(href='/Admin/AgricOfficer/AOdashboard.html' aria-current='page')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#home')
+              |                   Home
+          li
+            a.nav-link.link-dark(href='/Admin/AgricOfficer/regFO.html')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#speedometer2')
+              |                   Register farmer One
+          li
+            a.nav-link.link-dark.active(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#table')
+              |                   Update FO Details
+          li
+            a.nav-link.link-dark(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#grid')
+              |                   Products
+          li
+            a.nav-link.link-dark(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#people-circle')
+              |                   Customers
+        hr
+        .dropdown
+          a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
+            img.rounded-circle.me-2(src='https://github.com/mdo.png' alt='' width='32' height='32')
+            strong mdo
+          ul.dropdown-menu.text-small.shadow(aria-labelledby='dropdownUser2')
+            li
+              a.dropdown-item(href='#') New project...
+            li
+              a.dropdown-item(href='#') Settings
+            li
+              a.dropdown-item(href='#') Profile
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href='/landingpage.html') Sign out
+    .col-md-10
+      .container-fluid.form-style(style='margin-left: 130px;')
+        // <div class="logo-div"><img class="user-logo mb-2" src="../images/logo.png" alt="Ufarm logo" /></div>
+        form#registerFO.form(action='#' name='registration' method='POST' onsubmit='return FarmerOneForm();')
+          h5.text-muted.text-center Update FarmerOne Details
+          hr
+          form.row.g-3
+            .col-md-6
+              label.form-label(for='firstName') First Name
+              input.form-control(type='text' name='firstName')
+              small#firstnameerr(style='color:red; font-weight:bold; font-size:small;')
+            .col-md-6
+              label.form-label(for='lastName') Last Name
+              input.form-control(type='text' name='lastName')
+              small#lastnameerr(style='color:red; font-weight:bold; font-size:small;')
+            .col-12
+              label.form-label(for='address') Address
+              input.form-control(type='text' name='address' placeholder='1234 Main St')
+              small#addresserr(style='color:red; font-weight:bold; font-size:small;')
+            .col-md-6
+              label.form-label(for='contact') Contact
+              input.form-control(type='tel' name='contact')
+              small#contacterr(style='color:red; font-weight:bold; font-size:small;')
+            .col-md-4
+              label.form-label(for='activities') Activities
+              select.form-select(name='activities')
+                option(selected='') Inspection
+                option Registration
+                option Approvals
+              small#activitieserr(style='color:red; font-weight:bold; font-size:small;')
+            .col-md-4
+              label.form-label(for='appointment') Change Appointment
+              select.form-select(name='appointment')
+                option(selected='') Ward 1
+                option Ward 2
+                option Ward 3
+                option Ward 4
+              small#appointmenterr(style='color:red; font-weight:bold; font-size:small;')
+            .col-md-2
+              label.form-label(for='ID') FO ID
+              input.form-control(type='text' name='foid')
+              small#foid(style='color:red; font-weight:bold; font-size:small;')
+            .col-12
+            .col-12
+              button.btn.btn-success(type='submit') UPDATE
+// Option 1: Bootstrap Bundle with Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+script(src='/js/form-validation.js')

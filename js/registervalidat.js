@@ -16,6 +16,7 @@
     const houseNumber = document.register.houseNumber;
     const activities = document.register.activities;
     
+    
 
 
 
@@ -32,6 +33,7 @@
     const dateOfBirthError = document.getElementById('birthdateerr');
     const genderError = document.getElementById('genderradioerr');
     const wardError = document.getElementById('warderr');
+    
 
 
     firstName.addEventListener("blur", firstNameVerify, true);
@@ -46,6 +48,7 @@
     dateOfBirth.addEventListener("blur", dateOfBirthVerify, true);
     gender.addEventListener("blur", genderVerify, true);
     ward.addEventListener("blur", wardVerify, true);
+    
 
     function Validate() {
         if (firstName.value === "") {
@@ -120,8 +123,7 @@
             wardError.style = "1px solid red";
             ward.focus();
             return false;
-        }
-        
+        } 
     }
 
     const firstNameRegex = /^.{3,15}[a-zA-Z]+$/;
@@ -129,9 +131,7 @@
     const alphaNumeric = /^[0-9a-zA-Z]+$/; 
     const ninRegex = /^[0-9a-zA-Z]{13}$/; 
     const phoneRegex =  /^\d{10}$/;
-    const aoregex = /^AO-([0-9]{3})+$/;
-    const ufregex = /^UF-([0-9]{3})+$/; 
-    const foregex = /^FO-([0-9]{3})+$/;
+   
 
 
 
@@ -245,6 +245,8 @@
              return false;
         }
     }
+
+    
 
     
 

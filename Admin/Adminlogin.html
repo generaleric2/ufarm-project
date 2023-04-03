@@ -41,14 +41,16 @@
       <div class="row">
         <div class="col-md-5 col-sm-6 col-xs-6">
           <div class="card" style="background: transparent;">
-            <form>
+            <form  id="regForm" action="#" name="login"  onsubmit="return Validate(event);" method="POST">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"><strong>ADMIN ID</strong></label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="admin" class="form-label"><strong>ADMIN ID</strong></label>
+                <input type="text" class="form-control" name="admin" >
+                <small id="adminerr"></small>
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"><strong>PASSWORD</strong></label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="password" class="form-label"><strong>PASSWORD</strong></label>
+                <input type="password" class="form-control" name="password">
+                <small id="passworderr"></small>
               </div>
               <button type="submit" class="btn btn-success">LOG IN</button>
             </form>
@@ -61,12 +63,7 @@
 
       
       <!-- login form ends -->
-     
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/js/custom.js"></script>
+    <script src="/js/loginval.js"></script>
   </body>
 </html>

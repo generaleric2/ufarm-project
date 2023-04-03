@@ -34,49 +34,55 @@
                     <div class="col-md-6">
                       <label for="lastName" class="form-label">Last Name</label>
                       <input type="lastName" class="form-control" id="lastName">
-                      <small id="lastnameerr"></small>
+                      <small id="lastnameerr" style="color: red; font-weight: bold; font-size: small;"></small>
                     </div>
                     <div class="col-6">
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" name="email" placeholder="name@example.com">
-                      <small id="emailerr"></small>
+                      <small id="emailerr" style="color: red; font-weight: bold; font-size: small;"></small>
                     </div>
                     <div class="col-6">
                       <label for="phonenumber" class="form-label">Phone Number</label>
                       <input type="tel" class="form-control" name="phonenumber" placeholder="+256">
-                      <small id="phonenumbererr"></small>
+                      <small id="phonenumbererr" style="color: red; font-weight: bold; font-size: small;"></small>
                     </div>
                     <div class="col-md-6">
-                      <label for="inputCity" class="form-label">Date Of Birth</label>
-                      <input type="date" class="form-control" id="inputdob">
-                    </div>
+                      <label for="dateb" class="form-label">Date Of Birth</label>
+                      <input type="date" class="form-control" name="dateb">
+                      <small id="doberr" style="color: red; font-weight: bold; font-size: small;"></small>
+                    </div> 
                     <div class="col-md-4">
-                      <label for="inputState" class="form-label">Gender</label>
-                      <select id="inputState" class="form-select">
-                        <option selected>Male</option>
+                      <label for="gender" class="form-label">Gender</label>
+                      <select name="gender" class="form-select">
+                        <option selected></option>
+                        <option>Male</option>
                         <option>Female</option>
                       </select>
+                      <small id="gendererr" style="color: red; font-weight: bold; font-size: small;"></small>
                     </div>
                     <div class="col-md-2">
-                      <label for="inputZip" class="form-label">Ward</label>
-                      <input type="text" class="form-control" id="inputward">
+                      <label for="ward" class="form-label">Ward</label>
+                      <input type="text" class="form-control" name="ward">
+                      <small id="warderr"></small>
                     </div>
                     <div class="col-6">
-                        <label for="inputAddress" class="form-label">Create a Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Atleast 6 characters">
+                        <label for="password" class="form-label">Create a Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Atleast 6 characters">
+                        <small id="passworderr" style="color: red; font-weight: bold; font-size: small;"></small>
                       </div>
                       <div class="col-6">
-                        <label for="inputAddress2" class="form-label">Confirm Passwod</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <label for="cfrmpassword" class="form-label">Confirm Passwod</label>
+                        <input type="password" class="form-control" name="cfrmpassword">
+                        <small id="cfrmpwderr" style="color: red; font-weight: bold; font-size: small;"></small>
                       </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label" for="gridCheck">
                           Check me out
                         </label>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="col-12">
                       <a href="/user/UrbanFarmer/loginuf.html">
                         <button type="submit" class="btn btn-primary">REGISTER</button>

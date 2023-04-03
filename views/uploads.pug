@@ -1,0 +1,135 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  link(href='/css/style.css' rel='stylesheet')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js')
+  title  UPLOADS
+.col-md-12
+  // As a heading
+  nav.navbar.navbar-dark.bg-dark
+    .container-fluid
+      span.navbar-brand.mb-0.h1 Urban Farmer Dashboard
+.container(style='margin-left: -10px;')
+  .row
+    .col-md-4
+      .d-flex.flex-column.flex-shrink-0.p-3.bg-light(style='width: 280px; height: 1030px; background: transparent;')
+        a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none(href='/')
+          svg.bi.me-2(width='40' height='32')
+            use(xlink:href='#bootstrap')
+          // <span class="fs-4"></span>
+          img(src='/images/icon1.jpg' style='height: 60px;')
+          span UFARM
+        hr
+        ul.nav.nav-pills.flex-column.mb-auto
+          li.nav-item
+            a.nav-link.link-dark(href='/user/UrbanFarmer/ufdashboard.html' aria-current='page')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#home')
+              |                   HOME
+          li
+            a.nav-link.link-dark.active(href='/user/UrbanFarmer/uploads.html')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#speedometer2')
+              |                   UPLOADS
+          li
+            a.nav-link.link-dark(href='/user/UrbanFarmer/upload.html')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#table')
+              |                   UPLOAD
+          li
+            a.nav-link.link-dark(href='#')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#grid')
+              |                   WITHDRAWS
+          li
+            a.nav-link.link-dark(href='/landingpage.html')
+              svg.bi.me-2(width='16' height='16')
+                use(xlink:href='#people-circle')
+              |                   LOG OUT
+        hr
+        .dropdown
+          a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
+            img.rounded-circle.me-2(src='https://github.com/mdo.png' alt='' width='32' height='32')
+            strong mdo
+          ul.dropdown-menu.text-small.shadow(aria-labelledby='dropdownUser2')
+            li
+              a.dropdown-item(href='#') New project...
+            li
+              a.dropdown-item(href='#') Settings
+            li
+              a.dropdown-item(href='#') Profile
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href='/landingpage.html') Sign out
+    // <div class="row">
+    .col-md-8
+      .row
+        // <div class="col-sm-8">
+        // <div class="col-md-8">
+        h1 RECENT UPLOADS
+        table.table
+          thead
+            tr
+              th(scope='col') NO
+              th(scope='col') Date
+              th(scope='col') Upload type
+              th(scope='col') FO ID
+          tbody
+            tr
+              th(scope='row') 1
+              td 12/1/22
+              td Cabbage
+              td FO 99832
+            tr
+              th(scope='row') 2
+              td 12/1/22
+              td Tomatoes
+              td FO 44539
+            tr
+              th(scope='row') 3
+              td 2/12/22
+              td Avocado
+              td FO 32098
+            tr
+              th(scope='row') 4
+              td 12/15/22
+              td Onions
+              td FO 99723
+            tr
+              th(scope='row') 5
+              td 12/22/22
+              td Maize
+              td FO 87500
+            tr
+              th(scope='row') 6
+              td 12/31/22
+              td Beans
+              td FO 87344
+            tr
+              th(scope='row') 7
+              td 1/1/23
+              td Peas
+              td FO 71123
+            tr
+              th(scope='row') 8
+              td 1/12/23
+              td Tomatoes
+              td FO 55344
+            tr
+              th(scope='row') 9
+              td 1/23/23
+              td Broccoli
+              td FO 44001
+            tr
+              th(scope='row') 10
+              td 2/12/23
+              td Onions
+              td FO 21342
+  // Option 1: Bootstrap Bundle with Popper
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+  script(src='/js/script.js')

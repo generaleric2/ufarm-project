@@ -31,7 +31,7 @@ head
                 use(xlink:href='#home')
               |                   Home
           li
-            a.nav-link.link-dark(href='/Admin/FarmerOne/regUF.html')
+            a.nav-link.link-dark(href='/regUF')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#speedometer2')
               |                   Register Urban Farmer
@@ -66,38 +66,28 @@ head
               hr.dropdown-divider
             li
               a.dropdown-item(href='#') Sign out
-    // <div class="row">
+
+
     .col-md-8
-      .row
-        .col-sm-4
-          .card
-            .card-body
-              h5.card-title Approved Uploads
-              p.card-text UGX 2,334,500
-              // <a href="#" class="btn btn-primary">Go somewhere</a>
-        .col-sm-4
-          .card
-            .card-body
-              h5.card-title Approved Orders
-              p.card-text UGX 4,345,554
-              // <a href="#" class="btn btn-primary">Go somewhere</a>
-        .col-sm-4
-          .card
-            .card-body
-              h5.card-title U Farmer Ratings
-              // <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              a.btn.btn-primary(href='#') View Ratings
-      //
-        <div class="container">
-        <div class="card">
-      .chart-container
-        p.chart-title
-          strong Farmers per Ward
-        canvas#farmers-chart
-      .chart-container
-        p.chart-title
-          strong Uploads per Ward
-        canvas#uploads-chart
+      h1 REGISTERED FARMER ONE
+      table.table
+        thead.thead-dark 
+          tr
+            th(scope='col') First Name
+            th(scope='col') Last Name
+            th(scope='col') User Name
+            th(scope='col') Update Details
+        tbody
+        if farmerOnes.length
+            each farmerOne in farmerOnes
+              tr
+                td #{farmerOne.firstname}
+                td #{farmerOne.lastname}
+                td #{farmerOne.username}
+                td 
+                    a.btn.btn-dark.btn-block(href='/updatedet/') UPDATE
+        else
+            p 'there are no farmer ones in the database'
 // <div class="row">
 // <div class="container-fluid" style="align-items: center; ">
 // Option 1: Bootstrap Bundle with Popper

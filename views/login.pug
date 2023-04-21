@@ -28,21 +28,21 @@ nav.navbar.navbar-expand-lg.navbar-light
   .row
     .col-md-5.col-sm-6.col-xs-6
       .card(style='background: transparent;')
-        form#regForm(action='#' name='login' onsubmit='return Validate();' method='POST')
+        form#regForm(action='/login' name='login' onsubmit='return Validate();' method='POST')
           .mb-3
-            label.form-label(for='user')
+            label.form-label(for='username')
               strong ID/USERNAME
-            input.form-control(type='text' name='user')
+            input.form-control(type='text' name='username')
             small#usererr
           .mb-3
-            label.form-label(for='password1')
+            label.form-label(for='password')
               strong PASSWORD
-            input.form-control(type='password1' name='password1')
+            input.form-control(type='password' name='password')
             small#passworderr1
           button.btn.btn-success(type='submit') LOG IN
   p
     | Dont have an account yet?
-    a(href='#') Register
+    a(href='/signup') Register
     | Here
 // login form ends
 // Optional JavaScript; choose one of the two!

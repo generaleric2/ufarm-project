@@ -1,0 +1,58 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  link(href='/css/shop.css' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js')
+  title SHOP
+// navbar starts
+nav.navbar.bg-body-tertiary
+  .container-fluid
+    a.navbar-brand(href='#')
+      img(src='/images/icon1.jpg' alt='Ufarm' width='40' height='40')
+      span(style='color: rgb(2, 77, 2);') UFARM
+    a.navbar.icon(href='#' style='font-size: 30px; color: rgb(2, 77, 2);')
+      i.bi.bi-cart-check-fill
+.container(style='margin-top: 30px;')
+  form.d-flex(role='search')
+    input.form-control.me-2(type='search' placeholder='Search For A Product' aria-label='Search')
+    button.btn.btn-outline-success(type='submit') Search
+.container(style='display: flex; align-items: center; justify-content: center; margin-top: 30px;')
+  h1 Your Daily Agric Shop
+.container-fluid(style='display: flex; align-items: center; justify-content: space-between; margin-top: 30px;')
+  h2 Groceries
+  h2 Diary Products
+  h2 Bulk Product
+.container
+  if data.length 
+    each product in data 
+      .card.produce-card(style='margin-left: 20px;')
+        .card-body
+          .item-img
+            img(src=product.productimage alt='product image')
+          .product-rating
+            i.bi.bi-star-fill.icon-style
+            i.bi.bi-star-fill.icon-style
+            i.bi.bi-star-fill.icon-style
+            i.bi.bi-star-half.icon-style
+            i.bi.bi-star.icon-style
+          .item-name
+            h6  #{product.productname}
+          .price-container
+            .current-price
+              h6 price #{product.price}
+            .original-price
+              h6.text-muted
+                s Shs 1500 
+            .discount
+              h6 45%
+          .shop-btn
+             form(method="post", action="add-to-cart")
+              button.btn.rounded-pill(type='submit') Shop Now
+      //- 
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+    script(src='/js/custom.js')

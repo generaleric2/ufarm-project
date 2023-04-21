@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
-const registerSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     firstname:{
         type:String,
         trim: true
@@ -66,7 +66,7 @@ const registerSchema = new mongoose.Schema({
         type:String,
         trim: true
     },
-})
 
-registerSchema.plugin(passportLocalMongoose,);
-module.exports = mongoose.model('Register', registerSchema)
+})
+userSchema.plugin(passportLocalMongoose,);
+module.exports = mongoose.model("User",userSchema)

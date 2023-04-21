@@ -1,0 +1,32 @@
+.produce-card {
+	height: 490px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	/* color: transparent !important; */
+	display: flex;
+	float: left;
+	margin-left: 10px;
+}
+
+.shop-btn {
+	padding: 1%;
+	margin-top: 5%;
+	text-align: center;
+}
+.shop-btn button {
+	width: 70%;
+	height: 15% !important;
+	padding: 5% 10%;
+	border-radius: 30px !important;
+	background-color: #18a15c;
+	color: white;
+	border: none;
+	font-size: 17px;
+}
+
+.container-fluid h2{
+	color: rgb(2, 77, 2);
+}
+.container h1{
+	color: rgb(2, 77, 2);
+}
+

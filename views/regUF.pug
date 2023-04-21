@@ -25,17 +25,17 @@ head
         hr
         ul.nav.nav-pills.flex-column.mb-auto
           li.nav-item
-            a.nav-link.link-dark(href='/Admin/FarmerOne/FOdashboard.html' aria-current='page')
+            a.nav-link.link-dark(href='/FOdashboard' aria-current='page')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#home')
               |                   Home
           li
-            a.nav-link.active(href='/Admin/FarmerOne/regUF.html')
+            a.nav-link.active(href='/regUF')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#speedometer2')
               |                   Register Urban Farmer
           li
-            a.nav-link.link-dark(href='/Admin/FarmerOne/approveup.html')
+            a.nav-link.link-dark(href='/approveup')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#table')
               |                   Pending Approvals
@@ -67,23 +67,23 @@ head
               a.dropdown-item(href='#') Sign out
     .col-md-10
       .container-fluid.form-style(style='margin-left: 130px;')
-        form#regForm(action='/register' name='register' onsubmit='return Validate(event);' method='POST')
+        form#regForm(action='/reguf' name='reguf' onsubmit='return Validate(event);' method='POST')
           h5.text-muted.text-center Add Urban Farmer Details
           .row
             .col
               .form-field
-                label(for='firstName') First Name
-                input#firstName(type='text' name='firstName')
+                label(for='firstname') First Name
+                input#firstName(type='text' name='firstname')
                 small#firstnameerr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field
-                label(for='lastName') Last Name
-                input#lastName(type='text' name='lastName')
+                label(for='lastname') Last Name
+                input#lastName(type='text' name='lastname')
                 small#lastNameerr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field
-                label(for='uniqueNumber') Unique Number
-                input#uniqueNumber(type='text' name='uniqueNumber')
+                label(for='username') User Name
+                input#uniqueNumber(type='text' name='username')
                 small#uniquenumbererr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field
@@ -96,12 +96,12 @@ head
                 label(for='role') Role
                 select#role(name='role')
                   option Assign Role
-                  option farmerOne
+                  option(value="urbanfarmer") urban Farmer
                 small#roleerr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field
-                label(for='ninNumber') NIN Number
-                input#ninNumber(type='text' name='ninNumber')
+                label(for='ninnumber') NIN Number
+                input#ninNumber(type='text' name='ninnumber')
                 small#ninnumbererr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field

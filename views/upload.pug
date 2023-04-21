@@ -63,18 +63,18 @@ head
     .col-md-10
       .container-fluid.form-style(style='margin-left: 150px;')
         // <div class="logo-div"><img class="user-logo mb-2" src="../images/logo.png" alt="Ufarm logo" /></div>
-        form.row.g-3
+        form.row.g-3(name="upload" action="upload" method="POST" enctype="multipart/form-data")
           h5.text-muted.text-center Upload Products
           .col-md-6
             p Drag your product image here:
             label.form-label(for='customFile')
-            input#customFile.form-control(type='file')
+            input#customFile.form-control(type='file' name="productimage")
             .col-12
-              label.form-label(for='address') Enter Price
+              label.form-label(for='price') Enter Price
               input.form-control(type='number' name='price' placeholder='UGX')
             .col-md-6
-              label.form-label(for='contact') Enter Description
-              input.form-control(type='text' name='description')
+              label.form-label(for='name') Product Name
+              input.form-control(type='text' name='productname')
             .col-12(style='margin-top: 10px;')
               button.btn.btn-success(type='submit') UPLOAD
     // Option 1: Bootstrap Bundle with Popper

@@ -24,17 +24,17 @@ head
         hr
         ul.nav.nav-pills.flex-column.mb-auto
           li.nav-item
-            a.nav-link.active(href='/Admin/AgricOfficer/AOdashboard.html' aria-current='page')
+            a.nav-link.active(href='/admindash' aria-current='page')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#home')
               |                   Home
           li
-            a.nav-link.link-dark(href='/Admin/AgricOfficer/regFO.html')
+            a.nav-link.link-dark(href='/regFO')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#speedometer2')
               |                   Register farmer One
           li
-            a.nav-link.link-dark(href='/Admin/AgricOfficer/updatedet.html')
+            a.nav-link.link-dark(href='/updatedet')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#table')
               |                   Update FO Details
@@ -68,20 +68,22 @@ head
     .col-md-8
       h1 REGISTERED FARMER ONE
       table.table
-        thead
+        thead.thead-dark 
           tr
-            th(scope='col') NO
             th(scope='col') First Name
             th(scope='col') Last Name
-            th(scope='col') FO ID
+            th(scope='col') User Name
             th(scope='col') Update Details
         tbody
-          tr
-            th(scope='row') 1
-            td #{farmerOne.firstName}
-            td #{farmerOne.lastName}
-            td #{farmerOne.FOID}
-            td 
-                a.btn.btn-dark.btn-block(href='/updatedet/') UPDATE
+        if farmerOnes.length
+            each farmerOne in farmerOnes
+              tr
+                td #{farmerOne.firstname}
+                td #{farmerOne.lastname}
+                td #{farmerOne.username}
+                td 
+                    a.btn.btn-dark.btn-block(href='/updatedet/') UPDATE
+        else
+            p 'there are no farmer ones in the database'
 // Option 1: Bootstrap Bundle with Popper
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')

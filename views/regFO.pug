@@ -25,30 +25,25 @@ head
         hr
         ul.nav.nav-pills.flex-column.mb-auto
           li.nav-item
-            a.nav-link.link-dark(href='/Admin/AgricOfficer/AOdashboard.html' aria-current='page')
+            a.nav-link.link-dark(href='/admindash' aria-current='page')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#home')
               |                   Home
           li
-            a.nav-link.active(href='/Admin/AgricOfficer/regFO.html')
+            a.nav-link.active(href='/regFO')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#speedometer2')
               |                   Register farmer One
           li
-            a.nav-link.link-dark(href='/Admin/AgricOfficer/updatedet.html')
+            a.nav-link.link-dark(href='/updatedet')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#table')
               |                   Update FO Details
           li
-            a.nav-link.link-dark(href='#')
+            a.nav-link.link-dark(href='/index')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#grid')
-              |                   Products
-          li
-            a.nav-link.link-dark(href='#')
-              svg.bi.me-2(width='16' height='16')
-                use(xlink:href='#people-circle')
-              |                   Customers
+              |                   SHOP
         hr
         .dropdown
           a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
@@ -64,7 +59,7 @@ head
             li
               hr.dropdown-divider
             li
-              a.dropdown-item(href='/landingpage') Sign out
+              a.dropdown-item(href='/logout') Sign out
     .col-md-10
       .container-fluid.form-style(style='margin-left: 130px;')
         // <div class="logo-div"><img class="user-logo mb-2" src="../images/logo.png" alt="Ufarm logo" /></div>
@@ -121,7 +116,7 @@ head
                 label(for='phonenumber')
                   | Phone Number:
                   small.asterisk  *
-                input#phonenumber(type='text' name='phonenumber')
+                input#phonenumber(type='number' name='phonenumber')
                 small#phonenumbererr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field

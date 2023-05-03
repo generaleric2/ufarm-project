@@ -1,0 +1,211 @@
+h1{
+	font-size: 25px;
+	color: none;
+}
+
+.box{
+    width: 19ch;
+    animation: typing 3s steps(19), blink .5s step-end ;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+/* .container{
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+} */
+.offcanvas-body ul li{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.offcanvas-body ul li :last-child{
+    margin-bottom: 0;
+}
+
+.offcanvas-body ul li a{
+    text-decoration: none;
+    display: block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: all .4s ease;
+}
+
+.offcanvas-body ul li a:hover{
+    color: green;
+
+}
+
+.bottom-shadow {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+/* .vline {
+	border-left: 3px solid green;
+	height: 25px;
+}
+
+.img-logo {
+	height: auto;
+	width: 45%;
+}
+.menu-logo {
+	height: auto;
+	width: 150px;
+}
+.search-style {
+	width: 100px;
+	border-radius: 25px;
+	background-color: #f1f1f1;
+}
+.menu-bar {
+	/* margin-top: 45px; */
+	/* padding-bottom: 45px; */
+	/* height: 100px;
+/* } */
+
+.navbar .dropdown {
+    margin-right: 100px;
+}
+
+.form-style {
+	margin-top: 80px;
+	/* margin: auto; */
+	background-color: #fff;
+	padding: 1em;
+	border-radius: 5px;
+	border-left: 16px solid #185805 !important;
+	box-shadow: 0.5px 2px 10px rgba(0, 0, 0, 0.3);
+	width: 1000px;
+}
+
+.form-field {
+	margin-bottom: 25px;
+}
+.form-field label {
+	display: block;
+	color: #777;
+	margin-bottom: 5px;
+}
+
+.form-field input,
+select {
+	border: solid 3px #f0f0f0;
+	border-radius: 3px;
+	padding: 7px;
+	margin-bottom: 3px;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+}
+.form-field input:focus,
+select:focus {
+	outline: none;
+}
+
+.checkbox-size{
+	transform: scale(0.40);
+	padding-right: 0px;
+	margin-right: 0px;
+	
+}
+.check-box-tex{
+	margin-top: 17px;
+	margin-left: 0px !important;
+}
+.radio {
+	margin-top: 15px;
+	display: flex;
+	margin-left: 0;
+}
+/* Input border color for success validation */
+.form-field.success input {
+	border-color: #18a15c;
+	/* border: solid 3px #f0f0f0; */
+}
+/* Input border color for error validation */
+.form-field.error input {
+	border-color: red;
+}
+/* Div in html for displaying the error message */
+.form-field .error {
+	color: red;
+	font-size: 14px;
+	height: 10px;
+}
+
+.card{
+    margin-top: 20px;
+    
+}
+.chart-container {
+    display: inline-block;
+    width: 50%;
+    margin-top: 2rem;
+  }
+  
+  canvas {
+    width: 100%;
+  }
+  
+
+
+
+/* .btn-success{
+	color: rgb(2, 77, 2);
+ } */
+
+
+ .produce-card {
+	height: 490px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	/* color: transparent !important; */
+	display: flex;
+	float: left;
+	margin-left: 10px;
+}
+
+.shop-btn {
+	padding: 1%;
+	margin-top: 5%;
+	text-align: center;
+}
+.shop-btn button {
+	width: 70%;
+	height: 15% !important;
+	padding: 5% 10%;
+	border-radius: 30px !important;
+	background-color: #18a15c;
+	color: white;
+	border: none;
+	font-size: 17px;
+}
+
+.container-fluid h2{
+	color: rgb(2, 77, 2);
+}
+.container h1{
+	color: rgb(2, 77, 2);
+}
+

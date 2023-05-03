@@ -44,10 +44,15 @@ head
               option Male
               option Female
             small#gendererr(style='color: red; font-weight: bold; font-size: small;')
-          .col-md-2
+          .col-md-4
             label.form-label(for='ward') Ward
-            input.form-control(type='text' name='ward')
-            small#warderr
+            select.form-select(name='ward')
+              option(selected='')
+              option Ward 1
+              option Ward 2
+              option Ward 3
+              option Ward 4
+            small#gendererr(style='color: red; font-weight: bold; font-size: small;')
           .col-6
             label.form-label(for='password') Create a Password
             input.form-control(type='password' name='password' placeholder='Atleast 6 characters')
@@ -56,15 +61,12 @@ head
             label.form-label(for='username') user Name
             input.form-control(type='username' name='username')
             small#cfrmpwderr(style='color: red; font-weight: bold; font-size: small;')
-          //
-            <div class="col-12">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-            Check me out
-            </label>
-            </div>
-            </div>
+          .col-md-4
+            label.form-label(for='role') Role
+            select.form-select(name='role')
+              option(selected='')
+              option(value="user") User
+            small#gendererr(style='color: red; font-weight: bold; font-size: small;')
           .col-12
             a(href='/user/UrbanFarmer/loginuf.html')
               button.btn.btn-primary(type='submit') REGISTER

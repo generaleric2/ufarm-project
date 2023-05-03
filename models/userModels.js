@@ -26,9 +26,8 @@ const userSchema = new mongoose.Schema({
         type:String,
         trim: true
     },
-    phoneNumber: {
-        type:String,
-        trim: true
+    phonenumber: {
+        type:Number,
     },
     residentType: {
         type:String,
@@ -52,7 +51,6 @@ const userSchema = new mongoose.Schema({
     },
     ward: {
         type:String,
-        trim: true
     },
     streetName: {
         type:String,

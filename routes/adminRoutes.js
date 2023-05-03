@@ -25,9 +25,29 @@ router.get("/admindash", connectEnsureLogin.ensureLoggedIn(), async(req, res) =>
 
 
 
-  router.get("/updatedet", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
-    res.render('updatedet');
-  })
+  router.get("/update_det/:username", async (req, res) =>{
+    try{
+        const item = await User.findOne({username:req.params.username});
+        res.render("updatedet", {farmerone:item}); 
+    }
+    catch(err) {
+        res.send("could not find student");
+        console.log(err)
+    }
+});
+
+
+router.post("/updatedet", async(req,res)=>{
+    try{
+        await User.findOneAndUpdate({username:req.query.username}, req.body)
+        res.redirect("/admindash")
+    }
+    catch(err){
+        res.send('cant update student details')
+        console.log(err)
+    }
+
+});
 
 
   router.get("/regFO", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
@@ -38,6 +58,14 @@ router.get("/admindash", connectEnsureLogin.ensureLoggedIn(), async(req, res) =>
   router.get("/admindash", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
     res.render('admindash');
   })
+
+
+
+
+  router.get('/logout', function(req, res) {
+    req.logout();
+    res.redirect('/login');
+  });
 
 
 

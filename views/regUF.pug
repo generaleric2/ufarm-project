@@ -40,15 +40,10 @@ head
                 use(xlink:href='#table')
               |                   Pending Approvals
           li
-            a.nav-link.link-dark(href='#')
+            a.nav-link.link-dark(href='/index')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#grid')
-              |                   Products
-          li
-            a.nav-link.link-dark(href='#')
-              svg.bi.me-2(width='16' height='16')
-                use(xlink:href='#people-circle')
-              |                   Customers
+              |                   SHOP
         hr
         .dropdown
           a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
@@ -67,7 +62,7 @@ head
               a.dropdown-item(href='#') Sign out
     .col-md-10
       .container-fluid.form-style(style='margin-left: 130px;')
-        form#regForm(action='/reguf' name='reguf' onsubmit='return Validate(event);' method='POST')
+        form#regForm(action='/regUF' name='reguf' onsubmit='return Validate(event);' method='POST')
           h5.text-muted.text-center Add Urban Farmer Details
           .row
             .col
@@ -96,7 +91,7 @@ head
                 label(for='role') Role
                 select#role(name='role')
                   option Assign Role
-                  option(value="urbanfarmer") urban Farmer
+                  option(value="urbanfarmer") Urban Farmer
                 small#roleerr(style='color: red; font-weight: bold; font-size: small;')
             .col
               .form-field
@@ -167,7 +162,7 @@ head
             .col
               .form-field
                 label(for='activities') Activities
-                select#activities(name='ward')
+                select#activities(name='activities')
                   option Assign activity
                   option Registration
                   option Approvals

@@ -33,22 +33,18 @@ head
       span UFARM
       h2 Checkout form
     .row.g-5
-      if cartItems.length > 0
-        table.table.table-striped.mt-3
-          thead
-            tr
-              th Product Name
-              th Price
-              th Quantity
-              th Total
-          tbody
-            each cartItem in cartItems
-              tr
-                td= cartItem.product.name
-                td $#{cartItem.product.price.toFixed(2)}
-                td= cartItem.quantity
-                td $#{(cartItem.product.price * cartItem.quantity).toFixed(2)}
-        h4 Total: $#{(cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0)).toFixed(2)}
+      .col-md-5.col-lg-4.order-md-last
+        each item in cartItems 
+          h4.d-flex.justify-content-between.align-items-center.mb-3
+            span.text-primary Your cart
+            span.badge.bg-primary.rounded-pill 3
+          ul.list-group.mb-3
+            li.list-group-item.d-flex.justify-content-between.lh-sm
+                div
+                  h6 #{product.productname}
+                  small.text-muted #{product.quantity}
+                span.text-muted #{product.price}
+              li.list-group-item.d-flex.justify-content-between.lh-sm
       .col-md-7.col-lg-8
         h4.mb-3 Billing address
         form.needs-validation(novalidate='')

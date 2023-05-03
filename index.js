@@ -68,6 +68,7 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'public/images')))
+// app.use(express.static(path.join(__dirname, 'public/js')))
 
 
 
@@ -86,9 +87,13 @@ app.use('/',foRoutes)
 app.use('/',ufRoutes)
 
 
-app.get("*", (req,res)=>{
-  res.status(404).send("this doesnt exist")
-})
+app.get('/error', function(req, res) {
+  res.status(404).render('error', {
+      title: 'Page Not Found',
+      message: 'The page you are looking for could not be found.'
+  });
+});
+
 
 
 app.listen(process.env.port || 3004,()=>

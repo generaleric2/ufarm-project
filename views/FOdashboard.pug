@@ -26,7 +26,7 @@ head
         hr
         ul.nav.nav-pills.flex-column.mb-auto
           li.nav-item
-            a.nav-link.active(href='/Admin/FarmerOne/FOdashboard.html' aria-current='page')
+            a.nav-link.active(href='/FOdashboard' aria-current='page')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#home')
               |                   Home
@@ -36,20 +36,15 @@ head
                 use(xlink:href='#speedometer2')
               |                   Register Urban Farmer
           li
-            a.nav-link.link-dark(href='/Admin/FarmerOne/approveup.html')
+            a.nav-link.link-dark(href='/approveup')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#table')
               |                   Approve Uploads
           li
-            a.nav-link.link-dark(href='#')
+            a.nav-link.link-dark(href='/index')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#grid')
-              |                   Products
-          li
-            a.nav-link.link-dark(href='#')
-              svg.bi.me-2(width='16' height='16')
-                use(xlink:href='#people-circle')
-              |                   Customers
+              |                   SHOP
         hr
         .dropdown
           a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
@@ -69,7 +64,7 @@ head
 
 
     .col-md-8
-      h1 REGISTERED FARMER ONE
+      h1 REGISTERED URBAN FARMERS
       table.table
         thead.thead-dark 
           tr
@@ -78,14 +73,13 @@ head
             th(scope='col') User Name
             th(scope='col') Update Details
         tbody
-        if farmerOnes.length
-            each farmerOne in farmerOnes
+        if urbanFarmers.length
+            each urbanFarmer in urbanFarmers
               tr
-                td #{farmerOne.firstname}
-                td #{farmerOne.lastname}
-                td #{farmerOne.username}
-                td 
-                    a.btn.btn-dark.btn-block(href='/updatedet/') UPDATE
+                td #{urbanFarmer.firstname}
+                td #{urbanFarmer.lastname}
+                td #{urbanFarmer.username}
+                td #{urbanFarmer.ward}
         else
             p 'there are no farmer ones in the database'
 // <div class="row">

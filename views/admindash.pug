@@ -39,16 +39,10 @@ head
                 use(xlink:href='#table')
               |                   Update FO Details
           li
-            a.nav-link.link-dark(href='#')
+            a.nav-link.link-dark(href='/index')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#grid')
-              |                   Products
-          li
-            a.nav-link.link-dark(href='#')
-              svg.bi.me-2(width='16' height='16')
-                use(xlink:href='#people-circle')
-              |                   Customers
-        hr
+              |                   SHOP
         .dropdown
           a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
             img.rounded-circle.me-2(src='https://github.com/mdo.png' alt='' width='32' height='32')
@@ -63,7 +57,7 @@ head
             li
               hr.dropdown-divider
             li
-              a.dropdown-item(href='/landingpage.html') Sign out
+              a.dropdown-item(href='/logout') Sign out
     // <div class="row">
     .col-md-8
       h1 REGISTERED FARMER ONE
@@ -82,7 +76,7 @@ head
                 td #{farmerOne.lastname}
                 td #{farmerOne.username}
                 td 
-                    a.btn.btn-dark.btn-block(href='/updatedet/') UPDATE
+                    a.btn.btn-dark.btn-block(href='/update_det/'+farmerOne.username) UPDATE
         else
             p 'there are no farmer ones in the database'
 // Option 1: Bootstrap Bundle with Popper

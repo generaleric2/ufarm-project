@@ -26,27 +26,22 @@ head
         hr
         ul.nav.nav-pills.flex-column.mb-auto
           li.nav-item
-            a.nav-link.link-dark(href='/user/UrbanFarmer/ufdashboard.html' aria-current='page')
+            a.nav-link.link-dark(href='/ufdashboard' aria-current='page')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#home')
               |                   HOME
           li
-            a.nav-link.link-dark.active(href='/user/UrbanFarmer/uploads.html')
+            a.nav-link.link-dark.active(href='/uploads')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#speedometer2')
               |                   UPLOADS
           li
-            a.nav-link.link-dark(href='/user/UrbanFarmer/upload.html')
+            a.nav-link.link-dark(href='/upload')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#table')
               |                   UPLOAD
           li
-            a.nav-link.link-dark(href='#')
-              svg.bi.me-2(width='16' height='16')
-                use(xlink:href='#grid')
-              |                   WITHDRAWS
-          li
-            a.nav-link.link-dark(href='/landingpage.html')
+            a.nav-link.link-dark(href='/logout')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#people-circle')
               |                   LOG OUT
@@ -65,7 +60,7 @@ head
             li
               hr.dropdown-divider
             li
-              a.dropdown-item(href='/landingpage.html') Sign out
+              a.dropdown-item(href='/logout') Sign out
     // <div class="row">
     .col-md-8
       .row

@@ -15,7 +15,7 @@ nav.navbar.bg-body-tertiary
     a.navbar-brand(href='#')
       img(src='/images/icon1.jpg' alt='Ufarm' width='40' height='40')
       span(style='color: rgb(2, 77, 2);') UFARM
-    a.navbar.icon(href='#' style='font-size: 30px; color: rgb(2, 77, 2);')
+    a.navbar.icon(href='/checkout' style='font-size: 30px; color: rgb(2, 77, 2);')
       i.bi.bi-cart-check-fill
 .container(style='margin-top: 30px;')
   form.d-flex(role='search')
@@ -51,8 +51,12 @@ nav.navbar.bg-body-tertiary
             .discount
               h6 45%
           .shop-btn
-             form(method="post", action="add-to-cart")
+             form(method="POST", action="add-to-cart")
               button.btn.rounded-pill(type='submit') Shop Now
+                input(type="hidden" name="productId" value="#{product._id}")
       //- 
+
+    //- script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE6FpAF+e58I6P0BimllBLOrE9Hub+XQnT2rsM6UksdQRVvoxMfooAo" crossorigin="anonymous")
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
-    script(src='/js/custom.js')
+    //- script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+    //- script(src='/js/custom.js')

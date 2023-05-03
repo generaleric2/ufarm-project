@@ -1,5 +1,5 @@
-const firstName = document.register.firstName;
-    const lastName = document.register.lastName;
+const firstName = document.register.firstname;
+    const lastName = document.register.lastname;
     const uniqueNumber = document.register.uniqueNumber;
     const password = document.register.password;
     const role = document.register.role;

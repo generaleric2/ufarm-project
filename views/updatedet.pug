@@ -35,20 +35,15 @@ head
                 use(xlink:href='#speedometer2')
               |                   Register farmer One
           li
-            a.nav-link.link-dark.active(href='#')
+            a.nav-link.link-dark.active(href='/updatedet')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#table')
               |                   Update FO Details
           li
-            a.nav-link.link-dark(href='#')
+            a.nav-link.link-dark(href='/index')
               svg.bi.me-2(width='16' height='16')
                 use(xlink:href='#grid')
-              |                   Products
-          li
-            a.nav-link.link-dark(href='#')
-              svg.bi.me-2(width='16' height='16')
-                use(xlink:href='#people-circle')
-              |                   Customers
+              |                   SHOP
         hr
         .dropdown
           a#dropdownUser2.d-flex.align-items-center.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
@@ -68,44 +63,46 @@ head
     .col-md-10
       .container-fluid.form-style(style='margin-left: 130px;')
         // <div class="logo-div"><img class="user-logo mb-2" src="../images/logo.png" alt="Ufarm logo" /></div>
-        form#registerFO.form(action='#' name='registration' method='POST' onsubmit='return FarmerOneForm();')
+        form#registerFO.form(action='/updatedet?username='+farmerone.username name='registration' method='POST' onsubmit='return FarmerOneForm();')
           h5.text-muted.text-center Update FarmerOne Details
           hr
           form.row.g-3
             .col-md-6
               label.form-label(for='firstName') First Name
-              input.form-control(type='text' name='firstName')
+              input.form-control(type='text' name='firstname' value=farmerone.firstname)
               small#firstnameerr(style='color:red; font-weight:bold; font-size:small;')
             .col-md-6
               label.form-label(for='lastName') Last Name
-              input.form-control(type='text' name='lastName')
+              input.form-control(type='text' name='lastname' value=farmerone.lastname)
               small#lastnameerr(style='color:red; font-weight:bold; font-size:small;')
             .col-12
               label.form-label(for='address') Address
-              input.form-control(type='text' name='address' placeholder='1234 Main St')
+              input.form-control(type='text' name='housenumber' placeholder='1234 Main St' value=farmerone.housenumber)
               small#addresserr(style='color:red; font-weight:bold; font-size:small;')
             .col-md-6
               label.form-label(for='contact') Contact
-              input.form-control(type='tel' name='contact')
+              input.form-control(type='tel' name='phonenumber' value=farmerone.phonenumber)
               small#contacterr(style='color:red; font-weight:bold; font-size:small;')
             .col-md-4
-              label.form-label(for='activities') Activities
-              select.form-select(name='activities')
-                option(selected='') Inspection
+              label.form-label(for='activities' ) Activities
+              select.form-select(name='activities' value=farmerone.activities)
+                option(selected='')
+                option Inspection
                 option Registration
                 option Approvals
               small#activitieserr(style='color:red; font-weight:bold; font-size:small;')
             .col-md-4
-              label.form-label(for='appointment') Change Appointment
-              select.form-select(name='appointment')
-                option(selected='') Ward 1
+              label.form-label(for='appointment' value=farmerone.ward) Change Appointment
+              select.form-select(name='ward')
+                option(selected='')
+                option Ward 1
                 option Ward 2
                 option Ward 3
                 option Ward 4
               small#appointmenterr(style='color:red; font-weight:bold; font-size:small;')
             .col-md-2
-              label.form-label(for='ID') FO ID
-              input.form-control(type='text' name='foid')
+              label.form-label(for='ID') User Name
+              input.form-control(type='text' name='username' value=farmerone.username)
               small#foid(style='color:red; font-weight:bold; font-size:small;')
             .col-12
             .col-12
